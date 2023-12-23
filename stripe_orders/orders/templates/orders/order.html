@@ -1,0 +1,35 @@
+{% extends 'orders/base.html' %}
+{% load humanize %}
+
+
+{% block content %}
+  <section>
+    <div class="container pt-5">
+      <div class="text-center mt-5">
+        <h1>Order №{{ order.id }} dated {{order.created|date:"d.m.Y"}}</h1>
+        <div class="orders mt-5">
+          <table class="table table-dark table-bordered mb-0">
+            <thead>
+              <tr>
+                <th scope="col">№</th>
+                <th scope="col">Name</th>
+                <th scope="col">Price</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for purchased_item in order.cart_history.purchased_items %}
+                <tr>
+
+                  <th scope="row">{{ forloop.counter }}</th>
+                  <td>{{ purchased_item.item_name }}</td>
+                  <td>{{ purchased_item.price|intcomma }} rub</td>
+                </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+          <p class="float-right h4 mt-3">Total {{ order.cart_history.total_cost|intcomma }} rub</p>
+        </div>
+      </div>
+    </div>
+  </section>
+{% endblock %}

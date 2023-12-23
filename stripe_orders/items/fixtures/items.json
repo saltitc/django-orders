@@ -1,0 +1,62 @@
+[
+  {
+    "model": "items.item",
+    "pk": 1,
+    "fields": {
+      "name": "Coffee Nescafe",
+      "description": "Strong rich coffee",
+      "price": "499.00",
+      "stripe_product_price_id": "price_1OPtVRLe0mO65rI53UIKsEQp"
+    }
+  },
+  {
+    "model": "items.item",
+    "pk": 2,
+    "fields": {
+      "name": "Lipton Tea",
+      "description": "Lemon flavored tea",
+      "price": "120.00",
+      "stripe_product_price_id": "price_1OPtVvLe0mO65rI55LWoWv4m"
+    }
+  },
+  {
+    "model": "items.item",
+    "pk": 3,
+    "fields": {
+      "name": "Water Aqua",
+      "description": "The purest water",
+      "price": "60.00",
+      "stripe_product_price_id": "price_1OPtX2Le0mO65rI5ildN1Yc3"
+    }
+  },
+  {
+    "model": "items.item",
+    "pk": 4,
+    "fields": {
+      "name": "Spaghetti Barilla",
+      "description": "Premium flour",
+      "price": "100.00",
+      "stripe_product_price_id": "price_1OPtY6Le0mO65rI54bdRsnS0"
+    }
+  },
+  {
+    "model": "items.item",
+    "pk": 5,
+    "fields": {
+      "name": "Snickers bar",
+      "description": "Nut flavored",
+      "price": "50.00",
+      "stripe_product_price_id": "price_1OPtZDLe0mO65rI5y8XDXDjJ"
+    }
+  },
+  {
+    "model": "items.item",
+    "pk": 6,
+    "fields": {
+      "name": "Banana",
+      "description": "Ripe bananas",
+      "price": "90.00",
+      "stripe_product_price_id": "price_1OPtZlLe0mO65rI55JIgRfOT"
+    }
+  }
+]

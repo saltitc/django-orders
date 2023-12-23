@@ -1,0 +1,42 @@
+{% extends 'orders/base.html' %}
+
+{% block content %}
+<section class="py-6" style="margin-top: 70px;">
+    <main class="col-lg-6">
+        <div class="ps-lg-3">
+            <h4 class="title">
+                Item: {{ item.name }}
+            </h4>
+            <div class="mb-3">
+                <span class="h5">Price: {{ item.price }} rub</span>
+            </div>
+            <p>
+                Description: {{ item.description }}
+            </p>
+            <button class="btn btn-success" data-item-id="{{ item.id }}" id="buyButton">
+                Buy
+            </button>
+        </div>
+    </main>
+</section>
+
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $("#buyButton").on("click", function() {
+            var itemId = $(this).data("item-id");
+
+            $.ajax({
+                method: 'GET',
+                url: '{% url "items:add-to-cart" item.id %}',
+                success: function(data) {
+                    alert('Success')
+                },
+                error: function() {
+                    alert('Error')
+                }
+            })
+        });
+    });
+</script>
+{% endblock content %}
